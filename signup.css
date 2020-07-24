@@ -1,0 +1,220 @@
+/* *{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body{
+  background-color: #d5ded7;
+}
+
+.login-form{
+  margin-top: 60px;
+  margin-bottom: 20px;
+  width: 360px;
+  background: #f1f1f1;
+  height: 550px;
+  padding: 80px 40px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.login-form h1{
+  text-align: center;
+  font-family: sans-serif;
+  margin-bottom: 60px;
+}
+
+.txtb{
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  margin: 30px 0;
+}
+
+.txtb input{
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #333;
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 5px;
+  height: 40px;
+}
+
+.logbtn{
+  display: block;
+  width: 100%;
+  height: 50px;
+  font-size:20px;
+  font-family: Courier New;
+  border: none;
+  background: #2ac996;
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.logbtn:hover{
+  background-position: right;
+}
+
+.bottom-text h4{
+  font-family: Trebuchet MS;
+  margin-top: 60px;
+  text-align: center;
+  font-size: 15px;
+} */
+
+
+
+/* new */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap');
+*{
+
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Baloo Da 2', cursive !important;
+}
+
+
+.login-form{
+  margin-top: 70px;
+  box-shadow: 0px 10px 10px 2px #EBEBEB;
+  overflow: hidden;
+  width: 600px;  
+  border-radius: 16px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -55%);
+}
+
+
+/*{
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  margin: 30px 0;
+}
+
+.txtb input{
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #333;
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 5px;
+  height: 40px;
+}
+*/
+.logbtn{
+  display: block;
+  width: 100%;
+  height: 45px;
+  font-size:20px;
+  border-radius: 27px;
+  border: none;
+  background: #2ac996;
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.logbtn:hover{
+  background-position: right;
+}
+
+.bottom-text h4{
+  margin-top: 60px;
+  text-align: center;
+  font-size: 15px;
+}
+
+
+/* TEST */
+.form-header{
+  background-color: #2AC996;
+  border-radius: 16px 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 130px;
+
+}
+.text{
+  position: relative;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+.form-content{
+  padding: 40px;
+}
+
+.txt {
+  width: 86%;
+  height: 80px;
+  border-color: transparent !important;
+  position: relative;
+  z-index: 1;
+  float: left;
+}
+
+.txt-1 {
+  width: 35%;
+  height: 80px;
+  border-color: transparent !important;
+  position: relative;
+  z-index: 1;
+  float: left;
+}
+.txt-2 {
+  width: 35%;
+  margin-right: 70px;
+  height: 80px;
+  border-color: transparent !important;
+  position: relative;
+  z-index: 1;
+  float: right;
+  
+}
+
+.input1 {
+  font-size: 17px;
+  border-color: transparent !important;
+  line-height: 1.2;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 55px;
+  background: #ebebeb;
+  border-radius: 27px;
+  padding: 0 35px 0 35px;
+}
+
+input {
+	outline: none;
+	border: none;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+img{
+    /* position: absolute; */
+    /* left: 50%;
+    transform: translateX(50%, 50%); */
+    margin: auto;
+    display: block;
+    height: 400px;
+    object-fit: contain;
+}

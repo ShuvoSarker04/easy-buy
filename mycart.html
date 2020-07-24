@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div class="top-nav-bar">
+        <div class="search-box">
+
+            <i class="fa fa-bars" id="menu-btn" onclick="openmenu()"></i>
+            <i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
+
+            <a href="index.html"> <img src="images/logo.png" class="logo"> </a>
+            <input type="text" class="form-control" >
+            <span class="input-group-text"><i class="fa fa-search"></i></span>
+        </div>
+
+        <div class="menu-bar" id="menuContent">
+            <ul>
+                <li><a href="index.html"><i class="fa fa-shopping-basket"></i> <span
+                            class="badge badge-warning">0</span></a></li>
+                <li><a href="sign up.html">Sign Up</a></li>
+                <li><a href="sign in.html">Log In</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="container mt-5">
+        <div class=" border" id="items"></div>
+
+        <div id="charges" class="mt-3">
+            
+        </div>
+    </div>
+
+
+<!-- foot -->
+
+    <!-- <section class="footer">
+        <div class="container tex-center">
+            <div class="row">
+                <div class="col-md-3">
+                    <h1>Useful Links</h1>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Discount Coupons</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h1>Company</h1>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h1>Follow Us On</h1>
+                    <ul>
+                        <li><a href="https://www.facebook.com"><i onclick="location.href='https://www.facebook.com'"
+                                    class="fa fa-facebook-official"></i> Facebook</a></li>
+                        <li><a href="https://www.youtube.com"><i onclick="location.href='https://www.youtube.com'"
+                                    class="fa fa-youtube-play"></i> YouTube</a></li>
+                        <li><a href="https://www.linkedin.com"><i onclick="location.href='https://www.linkedin.com'"
+                                    class="fa fa-linkedin"></i> Linkedin</a></li>
+                        <li><a href="https://www.twitter.com"><i onclick="location.href='https://www.twitter.com'"
+                                    class="fa fa-twitter"></i> Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-image">
+                    <h1>Download App</h1>
+                    <a href="https://play.google.com/"><img src="images/google app.png"></a>
+                    <a href="https://www.apple.com/"><img src="images/apple app.png"></a>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Made with <i class="fa fa-heart-o"></i> by Shuvo & Hasan</p>
+        </div>
+    </section> -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <script src="./assets/js/cart.js"></script>
+</body>
+
+</html>
