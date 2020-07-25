@@ -1,7 +1,12 @@
 let myCart = (localStorage.getItem('myCart')) ? JSON.parse(localStorage.getItem('myCart')): {};
 
+console.log(myCart)
 let items = Object.keys(myCart)
 
 let totalItem = items.length;
 
-document.querySelector('#totalItem').innerHTML = totalItem;
+let tItem = document.querySelector('#totalItem');
+
+if(tItem){
+tItem.innerHTML = totalItem;
+}

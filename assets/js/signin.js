@@ -40,9 +40,10 @@ signInForm.addEventListener('submit', function(e){
 
 
 // PASS RESET
-document
-.querySelector('#passResetForm')
-.addEventListener('submit', (e)=>{
+const resetForm = document.querySelector('#passResetForm');
+
+if(resetForm){
+resetForm.addEventListener('submit', (e)=>{
     e.preventDefault();
     let email = e.target[0].value;
 
@@ -56,4 +57,4 @@ document
       })
 });
 
-    
+    }

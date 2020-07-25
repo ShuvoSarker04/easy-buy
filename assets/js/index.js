@@ -38,9 +38,3 @@
       //          </ul> 
     }
             
-let logout = document.querySelector('#logout');
-if(logout!=null){
-logout.addEventListener('click', ()=>{
-    localStorage.removeItem('user');
-    location.href = 'index.html';   
-});}

@@ -4,6 +4,7 @@
 <head>
     <title>Cart</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/mycart.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -12,30 +13,44 @@
 <body>
 
     <div class="top-nav-bar">
-        <div class="search-box">
+		<div class="search-box">
 
-            <i class="fa fa-bars" id="menu-btn" onclick="openmenu()"></i>
-            <i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
+			<i class="fa fa-bars" id="menu-btn" onclick="openmenu()"></i>
+			<i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
 
-            <a href="index.html"> <img src="images/logo.png" class="logo"> </a>
-            <input type="text" class="form-control" >
-            <span class="input-group-text"><i class="fa fa-search"></i></span>
-        </div>
+			<a href="index.html"> <img src="images/logo.png" class="logo"> </a>
+			<input type="text" class="form-control">
+			<span class="input-group-text"><i class="fa fa-search"></i></span>
+		</div>
 
-        <div class="menu-bar" id="menuContent">
-            <ul>
-                <li><a href="index.html"><i class="fa fa-shopping-basket"></i> <span
-                            class="badge badge-warning">0</span></a></li>
-                <li><a href="sign up.html">Sign Up</a></li>
-                <li><a href="sign in.html">Log In</a></li>
-            </ul>
-        </div>
+		<div class="menu-bar" id="menuContent">
+			<!-- <ul>
+					added in js file    -->
+		</div>
+	</div>
+
+
+    
+    <div class="container mt-5" id="notLoggedIn">
+        <div class="card" style="width: 25rem; margin: auto;">
+            <img class="card-img-top message-img" src="" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-white p-2 text-center message rounded" style="background-color: #2AC996;"></p>
+            </div>
+          </div>    
+    </div>
+    <div class="container mt-5" id="emptyCart">
+        <div class="card" style="width: 25rem; margin: auto;">
+            <img class="card-img-top message-img" src="" alt="Card image cap" style="width: 30rem; margin-left: -2.2rem;">
+            <div class="card-body">
+                <p class="card-text text-white p-2 text-center message rounded" style="background-color: #2AC996;"></p>
+            </div>
+          </div>    
     </div>
 
 
-
     <div class="container mt-5">
-        <div class=" border" id="items"></div>
+        <div class="" id="items"></div>
 
         <div id="charges" class="mt-3">
             
@@ -94,6 +109,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     
+    <script src="./assets/js/navbar.js"></script>
+    
+    <script src="./assets/js/totalItem.js"></script>
     <script src="./assets/js/cart.js"></script>
 </body>
 

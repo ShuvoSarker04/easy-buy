@@ -1,46 +1,53 @@
 <html>
   <head>
     <title>EasyBuy</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./assets/css/product.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/product.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   </head>
 
   <body>
-
     <!--Navigation Bar-->
 
     <div class="top-nav-bar">
       <div class="search-box">
-
         <i class="fa fa-bars" id="menu-btn" onclick="openmenu()"></i>
-          <i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
-        
-        <a href="index.html"> <img src="images/logo.png" class="logo"> </a>
-        <input type="text" class="form-control">
+        <i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
+
+        <a href="index.html"> <img src="images/logo.png" class="logo" /> </a>
+        <input type="text" class="form-control" />
         <span class="input-group-text"><i class="fa fa-search"></i></span>
       </div>
 
       <div class="menu-bar" id="menuContent"><!-- Added in navbar.js-->></div>
     </div>
 
-<!-------------Single Product------------->    
+    <!-------------Single Product------------->
 
     <section class="single-product">
       <div class="container">
         <div class="row">
           <div class="col-md-5">
-            <div id="product-slider" class="carousel slide carousel-fade" data-ride="carousel" >
-              <div class="carousel-inner">
-              </div>
+            <div
+              id="product-slider"
+              class="carousel slide carousel-fade"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner"></div>
             </div>
-          </div>   
-    
-           <div class="col-md-7" id="productDetails">
-               <!-- <p class="new-arrival text-center">NEW</p>
+          </div>
+
+          <div class="col-md-7" id="productDetails">
+            <!-- <p class="new-arrival text-center">NEW</p>
                   <h2>Men's T Shirts V Neck - Blue Color</h2>
                <p>Product Code: IRSC2019</p>  
                   
@@ -51,190 +58,121 @@
                <label>Quantity: </label>
                <input type="text" value="1" id="quantity">
                <button type="button" class="btn btn-primary" id="addToCart">Add to Cart</button> -->
-          </div>    
-        </div>    
-      </div>    
-    </section>
-    
-<!------------product-description-------------->
-    
-    <section class="product-description">
-          <div class="container">
-          <h4>Product Description</h4>
-          <p id="description"></p>
-              
-          <hr>    
-          </div> 
-        
-          <div class="container">
-              <div class="title-box">
-              <h2>Similar</h2>
-              </div>
-              <div class="row">
-              <div class="col-md-3">
-              <div class="product-top">
-                  <a href="product.html"><img src="images/product1.jpg"></a> 
-                  <div class="overlay-right">
-                  <button type="button" class="btn btn-secondary" title="Quick Shop">
-                     <i class="fa fa-eye"></i> 
-                  </button>
-                  <button type="button" class="btn btn-secondary" title="Add to Wishlist">
-                     <i class="fa fa-heart-o"></i> 
-                  </button>
-                      <button type="button" class="btn btn-secondary" title="Add to Cart">
-                     <i class="fa fa-shopping-cart"></i> 
-                  </button>
-                  </div>
-              </div>
-              <div class="product-bottom text-center">
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star-half-o"></i>  
-                  <h3>Fitness Watch</h3>
-                  <h5>&#x9f3 500</h5>
-              </div>
-              </div>
-                  
-              <div class="col-md-3">
-              <div class="product-top">
-                  <a href="product.html"><img src="images/product2.jpg"></a> 
-                  <div class="overlay-right">
-                  <button type="button" class="btn btn-secondary" title="Quick Shop">
-                     <i class="fa fa-eye"></i> 
-                  </button>
-                  <button type="button" class="btn btn-secondary" title="Add to Wishlist">
-                     <i class="fa fa-heart-o"></i> 
-                  </button>
-                      <button type="button" class="btn btn-secondary" title="Add to Cart">
-                     <i class="fa fa-shopping-cart"></i> 
-                  </button>
-                  </div>
-              </div>
-              <div class="product-bottom text-center">
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star"></i>  
-                  <h3>Smart Watch</h3>
-                  <h5>&#x9f3 500</h5>
-              </div>
-              </div>
-                  
-              <div class="col-md-3">
-              <div class="product-top">
-                  <a href="product.html"><img src="images/product3.jpg"></a> 
-                  <div class="overlay-right">
-                  <button type="button" class="btn btn-secondary" title="Quick Shop">
-                     <i class="fa fa-eye"></i> 
-                  </button>
-                  <button type="button" class="btn btn-secondary" title="Add to Wishlist">
-                     <i class="fa fa-heart-o"></i> 
-                  </button>
-                      <button type="button" class="btn btn-secondary" title="Add to Cart">
-                     <i class="fa fa-shopping-cart"></i> 
-                  </button>
-                  </div>
-              </div>
-              <div class="product-bottom text-center">
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star"></i>  
-                  <h3>Formarl Shoes</h3>
-                  <h5>&#x9f3 500</h5>
-              </div>
-              </div>
-               
-              <div class="col-md-3">
-              <div class="product-top">
-                  <a href="product.html"><img src="images/product4.jpg"></a> 
-                  <div class="overlay-right">
-                  <button type="button" class="btn btn-secondary" title="Quick Shop">
-                     <i class="fa fa-eye"></i> 
-                  </button>
-                  <button type="button" class="btn btn-secondary" title="Add to Wishlist">
-                     <i class="fa fa-heart-o"></i> 
-                  </button>
-                      <button type="button" class="btn btn-secondary" title="Add to Cart">
-                     <i class="fa fa-shopping-cart"></i> 
-                  </button>
-                  </div>
-              </div>
-              <div class="product-bottom text-center">
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star"></i>  
-                <i class="fa fa-star-half-o"></i>  
-                <i class="fa fa-star-o"></i>  
-                  <h3>Leather Watch</h3>
-                  <h5>&#x9f3 500</h5>
-              </div>
-              </div>    
-              
-              </div>
           </div>
-        
+        </div>
+      </div>
     </section>
-    
-      
- <!------------Footer----------->
+
+    <!------------product-description-------------->
+
+    <section class="product-description">
+      <div class="container">
+        <h4>Product Description</h4>
+        <p id="description"></p>
+
+        <hr />
+      </div>
+
+      <div class="container">
+        <div class="title-box">
+          <h2>Similar</h2>
+        </div>
+        <div class="row" id="similarProducts">
+          <!-- Added In product.js -->
+        </div>
+      </div>
+    </section>
+
+    <!------------Footer----------->
 
     <section class="footer">
-    <div class="container tex-center">
+      <div class="container tex-center">
         <div class="row">
-            <div class="col-md-3">
-                <h1>Useful Links</h1>
-                <ul>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Terms of Use</a></li>
-                  <li><a href="#">Return Policy</a></li>
-                  <li><a href="#">Discount Coupons</a></li>
-              </ul>
-            </div>
-            
-            <div class="col-md-3">
-                <h1>Company</h1>
-                <ul>
-                <li><a href="#">About Us</a></li>   
-                <li><a href="#">Contact Us</a></li>    
-                <li><a href="#">Career</a></li>
-                <li><a href="#">Affiliate</a></li>
+          <div class="col-md-3">
+            <h1>Useful Links</h1>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Return Policy</a></li>
+              <li><a href="#">Discount Coupons</a></li>
             </ul>
-            </div>      
-            <div class="col-md-3">
-                <h1>Follow Us On</h1>
-                <ul>
-                  <li><a href="https://www.facebook.com"><i onclick="location.href='https://www.facebook.com'" class="fa fa-facebook-official"></i> Facebook</a></li>
-                  <li><a href="https://www.youtube.com"><i onclick="location.href='https://www.youtube.com'" class="fa fa-youtube-play"></i> YouTube</a></li>
-                  <li><a href="https://www.linkedin.com"><i onclick="location.href='https://www.linkedin.com'" class="fa fa-linkedin"></i> Linkedin</a></li>
-                  <li><a href="https://www.twitter.com"><i onclick="location.href='https://www.twitter.com'" class="fa fa-twitter"></i> Twitter</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 footer-image">
-                <h1>Download App</h1>
-                <a href="https://play.google.com/"><img src="images/google app.png"></a>
-                <a href="https://www.apple.com/"><img src="images/apple app.png"></a>
-            </div>
+          </div>
+
+          <div class="col-md-3">
+            <h1>Company</h1>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Affiliate</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h1>Follow Us On</h1>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com"
+                  ><i
+                    onclick="location.href='https://www.facebook.com'"
+                    class="fa fa-facebook-official"
+                  ></i>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://www.youtube.com"
+                  ><i
+                    onclick="location.href='https://www.youtube.com'"
+                    class="fa fa-youtube-play"
+                  ></i>
+                  YouTube</a
+                >
+              </li>
+              <li>
+                <a href="https://www.linkedin.com"
+                  ><i
+                    onclick="location.href='https://www.linkedin.com'"
+                    class="fa fa-linkedin"
+                  ></i>
+                  Linkedin</a
+                >
+              </li>
+              <li>
+                <a href="https://www.twitter.com"
+                  ><i
+                    onclick="location.href='https://www.twitter.com'"
+                    class="fa fa-twitter"
+                  ></i>
+                  Twitter</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-image">
+            <h1>Download App</h1>
+            <a href="https://play.google.com/"
+              ><img src="images/google app.png"
+            /></a>
+            <a href="https://www.apple.com/"
+              ><img src="images/apple app.png"
+            /></a>
+          </div>
         </div>
-        <hr>
-        <p class="copyright">Made with <i class="fa fa-heart-o"></i> by Shuvo & Hasan</p>
-    </div>    
+        <hr />
+        <p class="copyright">
+          Made with <i class="fa fa-heart-o"></i> by Shuvo & Hasan
+        </p>
+      </div>
     </section>
 
-
     <!-- FIREBASE SCRIPT -->
-  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
 
-  <script src="./assets/js/app.js"></script>
-  <script src="./assets/js/product.js"></script>
-  <script src="./assets/js/navbar.js"></script>
-  <script src="./assets/js/totalItem.js"></script>
-  
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/product.js"></script>
+    <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/totalItem.js"></script>
   </body>
 </html>

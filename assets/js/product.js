@@ -1,28 +1,35 @@
-const params = new URLSearchParams(window.location.search)
+const userLoggedIn = localStorage.getItem('user');
+const params = new URLSearchParams(window.location.search);
 let data;
-firebase.firestore().collection('products').doc(params.get('id')).get().then(p=>{
-    console.log(p.data())
+let category;
+//Fetch Selected Item
+firebase
+  .firestore()
+  .collection("products")
+  .doc(params.get("id"))
+  .get()
+  .then((p) => {
+    console.log(p.data());
 
     data = p.data();
-
+    category = data.category;
     let srcs = Object.keys(data.img);
 
-    console.log(srcs)
-    let i=0;
-    let div = document.querySelector('.carousel-inner');
-    srcs.forEach(src=>{
-        if(i===0){
-        div.innerHTML+=`<div class="carousel-item active">
+    let i = 0;
+    let div = document.querySelector(".carousel-inner");
+    srcs.forEach((src) => {
+      if (i === 0) {
+        div.innerHTML += `<div class="carousel-item active">
         <img src="${data.img[src]}" class="d-block" style="width:75%">
-      </div>`
-    }else{
-        div.innerHTML+=`<div class="carousel-item">
+      </div>`;
+      } else {
+        div.innerHTML += `<div class="carousel-item">
         <img src="${data.img[src]}" class="d-block" style="width:75%">
-      </div>`
-    }
-    i++;
+      </div>`;
+      }
+      i++;
     });
-    div.innerHTML+=`
+    div.innerHTML += `
     <a class="carousel-control-prev" href="#product-slider" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -32,10 +39,7 @@ firebase.firestore().collection('products').doc(params.get('id')).get().then(p=>
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-    `
-    
-
-
+    `;
 
     // Product Details
     let html = ` <p class="new-arrival text-center">${data.condition}</p>
@@ -50,54 +54,126 @@ firebase.firestore().collection('products').doc(params.get('id')).get().then(p=>
  <input type="text" value="1" id="quantity">
  <button type="button" class="btn btn-primary" id="addToCart">Add to Cart</button>`;
 
- document.querySelector('#productDetails').innerHTML = html;
- document.querySelector('#description').innerHTML = data.description;
+    document.querySelector("#productDetails").innerHTML = html;
+    document.querySelector("#description").innerHTML = data.description;
+
+    //Fetch similar 4 items
+    let similarProducts = [];
+    firebase
+      .firestore()
+      .collection("products")
+      .where("category", "==", category)
+      .limit(5)
+      .get()
+      .then((items) => {
+        items.forEach((item) => {
+          similarProducts.push(item.data());
+        });
+
+        //Remove same item
+        similarProducts = similarProducts.filter(
+          (product) => product.productCode != data.productCode
+        );
 
 
+        // Show similar product in html
+        let sProductsDiv = document.querySelector("#similarProducts");
+        similarProducts.forEach((prd) => {
 
+          let html = `
+          <div class="col-md-3">
+          <div class="product-top">
+            <a href="product.html?id=${prd.productId}"><img src="${prd.img.src1}"></a>
+            <div class="overlay-right">
+              <button type="button" class="btn btn-secondary" title="Quick Shop">
+                <i class="fa fa-eye"></i>
+              </button>
+              <button type="button" class="btn btn-secondary" title="Add to Wishlist">
+                <i class="fa fa-heart-o"></i>
+              </button>
+              <button type="button" class="btn btn-secondary" title="Add to Cart">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+    
+          <div class="product-bottom text-center">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <h3>${prd.name}</h3>
+            <h5>&#x9f3 ${prd.price}</h5>
+          </div>
+        </div>
+      `;
+    
+      sProductsDiv.innerHTML+=html;
+        });
+      });
+
+    
+  });
+
+// firebase
+// .firestore().collection("products").where("category", "==", category)
+//     .get()
+//     .then(function(querySnapshot) {
+//         querySnapshot.forEach(function(doc) {
+//             // doc.data() is never undefined for query doc snapshots
+//             console.log(doc.id, " => ", doc.data());
+//         });
+//     })
+
+setTimeout(() => {
+  const quantity = document.querySelector("#quantity");
+  const addToCart = document.querySelector("#addToCart");
+
+  console.log("WORKING");
+  if (quantity && addToCart) {
+    addToCart.addEventListener("click", () => {
+      if(userLoggedIn!=null || userLoggedIn!=undefined){
+      let myCart = localStorage.getItem("myCart")
+        ? JSON.parse(localStorage.getItem("myCart"))
+        : {};
+
+      let q = quantity.value;
+
+      let item = {
+        productId: params.get("id"),
+        name: data.name,
+        quantity: q,
+        image: data.img[0],
+        productCode: data.productCode,
+        price:
+          data.sale === "0"
+            ? parseInt(data.price) * q
+            : parseInt(data.sale) * q,
+        sPrice:
+          data.sale === "0"
+            ? parseInt(data.price) / q
+            : parseInt(data.sale) / q,
+      };
+
+      if (myCart[item.productId]) {
+        myCart[item.productId].price = item.price;
+        myCart[item.productId].quantity = q;
+      } else {
+        myCart[item.productId] = item;
+      }
+
+      //Increase cart Item
+      document.querySelector("#totalItem").innerHTML = Object.keys(
+        myCart
+      ).length;
+
+      //Set items in localstorage mycart
+      localStorage.setItem("myCart", JSON.stringify(myCart));
+    
+  }else{
+    alert("You must logged in first!")
+  }
 });
-
-setTimeout(()=>{
-  const quantity = document.querySelector('#quantity');
-  const addToCart = document.querySelector('#addToCart');
-  
-  console.log("WORKING")
-  if(quantity && addToCart){
-      addToCart.addEventListener('click', ()=>{
-  
-          console.log(quantity.value);
-  
-          let myCart = localStorage.getItem('myCart') ? JSON.parse(localStorage.getItem('myCart')) : {} ;
-  
-          let q = quantity.value
-  
-          let item = {
-              productId:  params.get('id'),
-              name: data.name,
-              quantity: q,
-              image: data.img[0],
-              productCode: data.productCode,
-              price: (data.sale==="0")? parseInt(data.price)*q : parseInt(data.sale)*q,
-              sPrice: (data.sale==="0")? parseInt(data.price)/q : parseInt(data.sale)/q
-          }
-  
-          if(myCart[item.productId]){
-              myCart[item.productId].price = item.price;
-              myCart[item.productId].quantity = q;
-          }else{
-              myCart[item.productId] = item;
-          }
-          
-          //Increase cart Item
-          document.querySelector('#totalItem').innerHTML = Object.keys(myCart).length;
-
-          //Set items in localstorage mycart
-          localStorage.setItem('myCart', JSON.stringify(myCart));
-  
-      })
   }
 }, 3000);
-
-
-
-
