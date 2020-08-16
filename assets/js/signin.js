@@ -19,6 +19,8 @@ signInForm.addEventListener('submit', function(e){
     let { email, password } = user;
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then(data=>{
+        localStorage.setItem('currentUser', JSON.stringify(firebase.auth().currentUser))
+        // console.log(data)
         firebase.firestore().collection('users').doc(data.user.uid)
         .get()
         .then((user)=>{
@@ -33,6 +35,12 @@ signInForm.addEventListener('submit', function(e){
         var errorMessage = error.message;
         console.log(errorMessage)
         // ...
+        document.querySelector('.error').style.display="block";
+        document.querySelector('.error p').innerHTML = "Please provide valid credentials";
+        setTimeout(()=>{
+            document.querySelector('.error p').innerHTML = '';
+            document.querySelector('.error').style.display="none"
+        },3000)
       });
 
 });

@@ -32,8 +32,7 @@ signUpForm.addEventListener('submit', function(e){
         contact:{
             mobile:document.querySelector('#contact').value,
             address:{
-                // city:document.querySelector('#city').value,
-                // country: document.querySelector('#country').value,
+                city: document.querySelector('#city').value,
                 area: document.querySelector('#area').value,
                 zip: document.querySelector('#zip').value
             }
@@ -73,7 +72,9 @@ signUpForm.addEventListener('submit', function(e){
 }
 
 
+if(document.querySelector('#emailError')){
 document.querySelector('#emailError').onchange = removeError();
 function removeError(){
     document.querySelector('#emailError').innerHTML = "";
+}
 }

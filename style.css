@@ -136,7 +136,7 @@ body
 .side-menu ul li{
     list-style-type: none;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 15px;
     cursor: pointer;
 }
 .side-menu ul li:hover{
@@ -273,6 +273,15 @@ body
     object-fit: contain;
     width: 80%;
 }
+.filterprd{
+    height: 216px;
+}
+.filterprd img{
+    margin: auto;
+    display: block;
+    object-fit: contain;
+    width: 50%;
+}
 .overlay-right{
     display: block;
     opacity: 0;
@@ -393,7 +402,7 @@ body
     margin-top: 70px;
 }
 .new-arrival{
-    background: green;
+    background: rgb(68, 173, 68);
     width: 50px;
     color: #fff;
     font-size: 12px;

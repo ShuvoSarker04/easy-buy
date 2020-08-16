@@ -68,7 +68,7 @@
                                     <div class="col-2">
                                         <div class="input-group-desc">
                                             <input class="input--style-5" type="password" name="confpassword" id="confpassword" required minlength="8">
-                                            <label class="label--desc">Comnfirm Password</label>
+                                            <label class="label--desc">Confirm Password</label>
                                         </div>
                                     </div>
                                 </div>
@@ -81,15 +81,24 @@
 
                                     <div class="col-9">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="area" id="area" required>
-                                            <label class="label--desc">Area/Address</label>
+                                            <input class="input--style-5" type="text" name="city" id="city" required>
+                                            <label class="label--desc">City/State</label>
                                         </div>
                                     </div>
 
                                     <div class="col-3">
                                         <div class="input-group-desc">
                                             <input class="input--style-5" type="text" name="zip" id="zip" required>
-                                            <label class="label--desc">Zip/Postal code</label>
+                                            <label class="label--desc">Zip/Postal</label>
+                                        </div>
+                                    </div>
+
+                                    <br><br><br><br>
+                                    
+                                    <div class="col-12">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="area" id="area" required>
+                                            <label class="label--desc">Area/Address</label>
                                         </div>
                                     </div>
                                 </div>
@@ -100,7 +109,7 @@
                             <div class="value">
                                 <div class="row row-refine">
 
-                                    <div class="col-9">
+                                    <div class="col-12">
                                         <div class="input-group-desc">
                                             <input class="input--style-5" type="text" name="contact" id="contact" required>
                                             <label class="label--desc">Phone Number</label>
@@ -114,11 +123,17 @@
                         <div>
                             <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
                         </div>
+
+                        <div class="card-footer form-content">
+                            <h4 style="color: rgb(133, 129, 129); margin-top: 20px; font-size: 16px;"> Already have an account? <a href="./sign in.html" style="color: #21b486;">Sign in</a> </h4>
+                          </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    
 
      <!-- FIREBASE SCRIPT -->
   <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>

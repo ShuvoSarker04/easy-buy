@@ -20,11 +20,11 @@ firebase
     srcs.forEach((src) => {
       if (i === 0) {
         div.innerHTML += `<div class="carousel-item active">
-        <img src="${data.img[src]}" class="d-block" style="width:75%">
+        <img src="${data.img[src]}" class="d-block selected_Product_Image" style="width:75%">
       </div>`;
       } else {
         div.innerHTML += `<div class="carousel-item">
-        <img src="${data.img[src]}" class="d-block" style="width:75%">
+        <img  src="${data.img[src]}" class="d-block selected_Product_Image" style="width:75%">
       </div>`;
       }
       i++;
@@ -98,11 +98,6 @@ firebase
           </div>
     
           <div class="product-bottom text-center">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
             <h3>${prd.name}</h3>
             <h5>&#x9f3 ${prd.price}</h5>
           </div>

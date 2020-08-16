@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./assets/css/peronalinfo.css">
+  <title>My Account</title>
+</head>
+
+<body>
+
+  <div class="top-nav-bar">
+    <div class="search-box">
+
+      <i class="fa fa-bars" id="menu-btn" onclick="openmenu()"></i>
+      <i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
+
+      <a href="index.html"> <img src="images/logo.png" class="logo"> </a>
+      <input type="text" class="form-control">
+      <span class="input-group-text"><i class="fa fa-search"></i></span>
+    </div>
+
+    <div class="menu-bar" id="menuContent">
+
+    </div>
+  </div>
+
+  <div class="container">
+    <form class="basicinfo">
+      <div class="form-row">
+        <h4>Personal Info</h4>
+        <div class="form-group col-md-12">
+          <label for="inputFname">First Name</label>
+          <input type="text" class="form-control" id="firstname" placeholder="First name">
+        </div>
+        <div class="form-group col-md-12">
+          <label for="inputLname">Last Name</label>
+          <input type="text" class="form-control" id="lastname" placeholder="Last name">
+        </div>
+        <div class="form-group col-md-12">
+          <label for="inputEmail4">E-mail</label>
+          <input type="email" class="form-control" id="email" placeholder="E-mail">
+        </div>
+      </div>
+
+      <h4>Contact Info</h4>
+      <div class="form-group">
+        <label for="inputAddress">Address</label>
+        <input type="text" class="form-control" id="address" placeholder="Address">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="city">
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputZip">Zip</label>
+          <input type="text" class="form-control" id="zip">
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="inputContact">Contact No.</label>
+          <input type="text" class="form-control" id="mobile">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+
+    <form class="updatepass">
+      <div class="form-row">
+        <h4>Change Password</h4>
+        <div class="form-group col-md-12">
+          <label for="inputFname">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <div class="form-group col-md-12">
+          <label for="inputLname">New Password</label>
+          <input type="password" class="form-control" id="newpass" placeholder="New Password">
+        </div>
+        <div class="form-group col-md-12">
+          <label for="inputLname">Confirm Password</label>
+          <input type="password" class="form-control" id="confpass" placeholder="Confirm Password">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Update Password</button>
+    </form>
+
+  </div>
+
+
+  <!------Website features------->
+
+	<section class="website-features">
+		<div class="container">
+			<div class="title-box">
+				<h2>Our Services</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-3 feature-box">
+					<img src="images/feature-1.png">
+					<div class="feature-text">
+						<p><b>100% Original items </b>are available at company.</p>
+					</div>
+				</div>
+				<div class="col-md-3 feature-box">
+					<img src="images/feature-2.png">
+					<div class="feature-text">
+						<p><b>Return within 30 days </b>of receiving your order.</p>
+					</div>
+				</div>
+				<div class="col-md-3 feature-box">
+					<img src="images/feature-3.png">
+					<div class="feature-text">
+						<p><b>Get free delivery for every </b>order on more than price.</p>
+					</div>
+				</div>
+				<div class="col-md-3 feature-box">
+					<img src="images/feature-4.png">
+					<div class="feature-text">
+						<p><b>Pay Online through multiple </b>options (Card/Net banking).</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!------------Footer----------->
+
+	<section class="footer">
+		<div class="container tex-center">
+			<div class="row">
+				<div class="col-md-3">
+					<h1>Useful Links</h1>
+					<ul>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Return Policy</a></li>
+						<li><a href="#">Discount Coupons</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-3">
+					<h1>Company</h1>
+					<ul>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Career</a></li>
+						<li><a href="#">Affiliate</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h1>Follow Us On</h1>
+					<ul>
+						<li><a href="https://www.facebook.com"><i onclick="location.href='https://www.facebook.com'"
+									class="fa fa-facebook-official"></i> Facebook</a></li>
+						<li><a href="https://www.youtube.com"><i onclick="location.href='https://www.youtube.com'"
+									class="fa fa-youtube-play"></i> YouTube</a></li>
+						<li><a href="https://www.linkedin.com"><i onclick="location.href='https://www.linkedin.com'"
+									class="fa fa-linkedin"></i> Linkedin</a></li>
+						<li><a href="https://www.twitter.com"><i onclick="location.href='https://www.twitter.com'"
+									class="fa fa-twitter"></i> Twitter</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 footer-image">
+					<h1>Download App</h1>
+					<a href="https://play.google.com/"><img src="images/google app.png"></a>
+					<a href="https://www.apple.com/"><img src="images/apple app.png"></a>
+				</div>
+			</div>
+			<hr>
+			<p class="copyright">Made with <i class="fa fa-heart-o"></i> by Shuvo & Hasan</p>
+		</div>
+	</section>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  
+  <!-- FIREBASE SCRIPT -->
+
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+  <script src="./assets/js/navbar.js"></script>
+  <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/pesonalinfo.js"></script>
+  <script src="./assets/js/totalItem.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap');
+*{
+  /* overflow: hidden; */
+  box-sizing: border-box;
+
+}
+.diff_font{
+  font-family: 'Baloo Da 2', cursive !important;
+}
+.fa-sort-down{
+  margin-bottom: 0.5px;
+  overflow: hidden;
+}
+.container-fluid{
+  display: none;
+}
+.sub-category__item a{
+  text-decoration: none;
+  padding: 10px;
+  color: inherit;
+}
+.sub-category__item a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+.container-fluid .container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-left: 60px;
+  padding-top: 20px;
+  width: 800px;
+  margin-left: 12vw;
+  font-family: 'Baloo Da 2', cursive !important;
+
+}
+
+.category-nav{
+  margin: 0;
+  padding: 0;
+  /* background-color: #c5bbbb; */
+  border-bottom: 0.5px solid #eeeeee;
+}
+
+.categories{
+  display: flex;
+  padding: 10px;
+  column-gap: 2%;
+  justify-content: center;
+  align-items: center;
+}
+ li{
+  list-style: none;
+}
+.category-item{
+  /* border: 0.5px solid #dddddd; */
+  padding: 5px;
+  cursor: pointer;
+  
+}
+
+.category-item:hover{
+  background-color: #eeeeee;
+  color: rgba(61, 57, 57, 0.8);
+  transition: all 0.5s;
+}
+
+/*-------------product-top CSS----------------*/
+.prolist .product-top {
+  height: 180px;
+}
+.prolist .product-top img{
+  margin: auto;
+  display: block;
+  object-fit: contain;
+  width: 80%;
+}
+.prolist .overlay-right{
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 10%;
+  margin-left: 0;
+  width: 70px;
+}
+.prolist .overlay-right .fa{
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  height: 35px;
+  width: 35px;
+  font-size: 20px;
+  padding: 7px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.prolist .overlay-right .btn-secondary{
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.prolist .product-top:hover .overlay-right{
+  opacity: 1;
+  margin-left: 5%;
+  transition: 0.5s;
+}
+
+/*--------------Product-bottom-CSS---------------*/
+
+.prolist .product-bottom .fa{
+  color: #2ac996;
+  font-size: 10px;
+}
+.prolist .product-bottom h3{
+  font-size: 20px;
+  font-weight: bold;
+}
+.prolist .product-bottom h5{
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+.prolist .new-products{
+  margin: 50px 0;
+}
+
+

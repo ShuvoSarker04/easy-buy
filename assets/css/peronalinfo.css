@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap');
+*
+{
+    margin: 0;
+    padding: 0; 
+    
+}
+body
+{
+    font-family: sans-serif;
+}
+
+/* Navigation Bar*/
+
+.top-nav-bar
+{
+    height: 57px;
+    top: 0;
+    position: sticky;
+    background: #fff;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #2ac996;
+    z-index: 2;
+}
+.logo
+{
+    height: 50px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+.search-box .form-control
+{
+    margin-top: 9px;
+    margin-left: 30px;
+    border: 1px solid #2ac996 !important;
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    box-shadow: none !important;
+    
+}
+.input-group-text
+{
+    background: #2ac996 !important;
+    border: 1px solid #2ac996 !important;
+    margin: 8.5px 10px 3px 0 !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    cursor: pointer;
+}
+.search-box
+{
+    display: inline-flex;
+    height: 50px;
+    width: 60%;
+}
+.fa-search
+{
+    color: #fff;
+}
+.menu-bar
+{
+    width: 40%;
+    height: 57px;
+    float: right;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    float: right;
+}
+.menu-bar ul li
+{
+    border-left: 1px solid #fff;
+    list-style-type: none;
+    padding: 15px 35px;
+    text-align: center;
+    background-color: #2ac996;
+    cursor: pointer;
+}
+.menu-bar ul li a
+{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+.fa-shopping-basket
+{
+    margin-right: 5px;
+}
+
+/* Responsive Navigation Bar*/
+
+@media only screen and (max-width: 980px)
+{
+    .top-nav-bar
+    {
+        height: 118px;
+        border-bottom: 0;
+    }
+    .search-box
+    {
+        width: 100%;
+    }
+    .menu-bar
+    {
+        width: 100%;
+    }
+    .menu-bar ul
+    {
+        margin: 10px 0;
+        width: 100%;
+    }
+    .menu-bar ul li
+    {
+        height: 57px;
+        width: 100%;
+    } 
+}
+
+/* Side Menu*/
+.side-menu{
+    height: 101.5%;
+    width: 15%;
+    font-size: 14px;
+    float:left;
+    z-index: 2;
+    background-color: #F2F2F2;
+}
+.side-menu ul{
+    margin-left: 10px;
+}
+.side-menu ul li{
+    list-style-type: none;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.side-menu ul li:hover{
+    color: #2ac996;
+
+}
+.side-menu ul li ul{
+    display: none;
+    z-index: 10;
+    top: 77px;
+}
+.side-menu ul li ul a{
+    color: #2ac996;
+    text-decoration: none;
+
+}
+.side-menu ul li:hover ul{
+    display: block;
+    height: 400px;
+    margin-left: 14%;
+    padding: 0 100px 10px 10px;
+    position: fixed;
+    background: #ececec;
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.5);
+}
+.fa-angle-right{
+    margin: 4px 8px 0 0;
+    float: right;
+}
+#menu-btn, #close-btn{
+    font-size: 30px;
+    margin:10px;
+    color: #2ac996;
+    display: none;
+}
+
+/* Responsive Side Menu*/
+
+@media only screen and (max-width: 980px){
+    
+    .side-menu{
+        width: 34%;
+        z-index: 20;
+        top: 133px;
+        position: fixed;
+        font-size: 12px;
+        display: none;
+    }
+    .side-menu ul li ul{
+        top: 133px;
+    }
+    .side-menu ul li:hover ul{
+        margin-left: 32%;
+    }
+    #menu-btn{
+        display: block;
+    }
+}
+
+
+.container{
+    font-family: 'Baloo Da 2', cursive !important;
+}
+.basicinfo{
+    width: 80%;
+    margin-left: 10%;
+
+}
+.updatepass{
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 10%;
+
+}
+
+/*----------website-features-------------*/
+.website-features{
+    margin: 60px 0;
+ }
+ 
+ .website-features img{
+     width: 20%;
+ }
+ .feature-text{
+     margin-top: 10px;
+     float: right;
+     width: 80%;
+     padding-left: 20px;
+ }
+ .feature-box{
+     padding-top: 20px;
+ }
+ 
+ /*--------------footer---------------*/
+ .footer{
+     margin-top: 50px;
+     background: #000;
+     color: #fff;
+ }
+ .footer h1{
+     font-size: 15px;
+     margin: 25px 0;
+ }
+ .footer ul{
+     list-style: none;
+ }
+ .footer ul li{
+     margin: 10px 0px;
+ }
+ .footer ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+ }
+ .footer p{
+     font-size: 12px;
+ }
+ .copyright{
+     margin-bottom: -80px;
+     text-align: center;
+     font-size: 15px;
+     padding-bottom: 20px;
+ }
+ .fa-heart-o{
+     color: red;
+     font-size: 15px;
+ }
+ .footer hr{
+     margin-top: 10px;
+     background-color: #fff;
+ }
+ .footer-image img{
+     margin: 5px 0px;
+     width: 150px;
+ }
+ .footer .row .fa{
+     padding-right: 20px;
+     font-size: 15px;
+ }
+ 
+ 
+ 

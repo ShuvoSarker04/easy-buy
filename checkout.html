@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout</title>
+<link rel="stylesheet" href="./assets/css/checkout.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://kit.fontawesome.com/baa7696661.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+      <div class="message alert alert-success">
+        <h5 class="text-center pt-2">Payment Successfull 👍</h5>
+        <button id="explore" class="btn btn-sm btn-info text-white mt-3">Explore more</button>
+      </div>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form>
+      
+        <div class="row">
+          <div class="col-50">
+            <h3><span class="font">Billing Address</span> </h3>
+            <label for="fname"><i class="fa fa-user"></i> <span class="font">Full Name</span> </label>
+            <input type="text" id="fname" name="firstname" placeholder="Name" required>
+            <label for="email"><i class="fa fa-envelope"></i> <span class="font">E-mail</span> </label>
+            <input type="text" id="email" name="email" placeholder="E-mail" required>
+            <label for="adr"><i class="fa fa-address-card-o"></i> <span class="font">Address</span> </label>
+            <input type="text" id="adr" name="address" placeholder="Address" required>
+            <label for="city"><i class="fa fa-institution"></i> <span class="font">City</span> </label>
+            <input type="text" id="city" name="city" placeholder="Area/City" required>
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state"><span class="font">District</span> </label>
+                <input type="text" id="state" name="state" placeholder="District" required>
+              </div>
+              <div class="col-50">
+                <label for="zip"><span class="font">Zip/Postal</span> </label>
+                <input type="text" id="zip" name="zip" placeholder="Zip/Postal" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3><span class="font">Payment</span> </h3>
+            <label for="fname"><span class="font">Accepted Cards</span> </label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname"><span class="font">Name on Card</span> </label>
+            <input type="text" id="cname" name="cardname" placeholder="Name on Card" required>
+            <label for="ccnum"><span class="font">Credit card number</span> </label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="Ex: 1111-2222-3333-4444" required>
+            <label for="expmonth"><span class="font">Exp Month</span> </label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="Month" required>
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear"><span class="font">Exp Year</span> </label>
+                <input type="text" id="expyear" name="expyear" placeholder="Year" required>
+              </div>
+              <div class="col-50">
+                <label for="cvv"><span class="font">CVV</span> </label>
+                <input type="text" id="cvv" name="cvv" placeholder="Ex- 352"required>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> <span class="font">Shipping address same as billing</span> 
+        </label>
+        <input type="submit" value="Continue to checkout" class="btn">
+      </form>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container myCart">
+      <h4><span class="font">Cart</span>  <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b><span id = 'totalItem'></span></b></span></h4>
+      
+    </div>
+  </div>
+</div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+	  <script src="./assets/js/app.js"></script>
+
+  <script src="./assets/js/checkout.js"></script>
+</body>
+</html>

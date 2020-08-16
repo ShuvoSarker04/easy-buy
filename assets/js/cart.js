@@ -11,6 +11,7 @@ if(Object.keys(User).length>0){
     document.querySelector('#notLoggedIn').style.display="none";
     document.querySelector('#emptyCart').style.display="none";
     
+    
 if(Items.length>0){
     for(let i=0; i<Items.length; i++){
 
@@ -172,5 +173,6 @@ document.querySelector('#charges').innerHTML = html;
     document.querySelector('#notLoggedIn .message-img').src = "https://i.pinimg.com/originals/81/c4/fc/81c4fc9a4c06cf57abf23606689f7426.jpg"
     document.querySelector('#notLoggedIn  .message').innerHTML = message;
     document.querySelector('#emptyCart').style.display="none";
+    document.querySelector('#proceed').style.display = "none";
 
 }

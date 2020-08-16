@@ -1,338 +1,281 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-	<div class="top-nav-bar">
-			<div class="search-box">
+  <head>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+	  <link rel="stylesheet" href="./assets/css/categorybar.css">
+    <script src="https://kit.fontawesome.com/baa7696661.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
 
-				<i class="fa fa-bars" id="menu-btn" onclick="openmenu()"></i>
-    			<i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
+	
+    <div class="top-nav-bar">
+      <div class="search-box">
+        <i class="fa fa-bars" id="menu-btn" onclick="openmenu()"></i>
+        <i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
 
-				<a href="index.html"> <img src="images/logo.png" class="logo"> </a>
-				<input type="text" class="form-control">
-				<span class="input-group-text"><i class="fa fa-search"></i></span>
-			</div>
+        <a href="index.html"> <img src="images/logo.png" class="logo" /> </a>
+        <input type="text" class="form-control" />
+        <span class="input-group-text"><i class="fa fa-search"></i></span>
+      </div>
 
-			<div class="menu-bar">
-				<ul>
-					<li><a href="index.html"><i class="fa fa-shopping-basket"></i>cart</a></li>    
-					<li><a href="sign up.html">Sign Up</a></li>    
-					<li><a href="sign in.html">Log In</a></li>    
-				</ul>   
-			</div>
-		</div>
+      <div class="menu-bar" id="menuContent"><!-- Added in navbar.js--></div>
+    </div>
+	
 
-		<section class="new-products">
-			<div class="container">
-				<div class="title-box">
-					<h2>Products</h2>
-				</div>
-				<div class="row">
-					<div class="col-md-3">
-					    <div class="product-top">
-					        <a href="product.html"><img src="images/product1.jpg"></a> 
-					        <div class="overlay-right">
-					        <button type="button" class="btn btn-secondary" title="Quick Shop">
-					           <i class="fa fa-eye"></i> 
-					        </button>
-					        <button type="button" class="btn btn-secondary" title="Add to Wishlist">
-					           <i class="fa fa-heart-o"></i> 
-					        </button>
-					            <button type="button" class="btn btn-secondary" title="Add to Cart">
-					           <i class="fa fa-shopping-cart"></i> 
-					        </button>
-					        </div>
-					    </div>
-					    <div class="product-bottom text-center">
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star-half-o"></i>  
-					        <h3>Fitness Watch</h3>
-					        <h5>&#x9f3 850.00</h5>
-					    </div>
-					</div>
+	<!-- <ul class="category">
+    
+    <li class="dropdown">
+		  <a href="" class="dropbtn">Men <i class="fas fa-sort-down"></i> </a>
+		  <div class="dropdown-content">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+		  </div>
+    </li>
+    
+    <li class="dropdown">
+		  <a href="" class="dropbtn">Women <i class="fas fa-sort-down"></i>  </a>
+		  <div class="dropdown-content">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+		  </div>
+    </li>
+    <li class="dropdown">
+		  <a href="" class="dropbtn">Bags/Wallet <i class="fas fa-sort-down"></i> </a>
+		  <div class="dropdown-content">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+		  </div>
+    </li>
+    
+		<li class="dropdown">
+		  <a href="" class="dropbtn">Shoes <i class="fas fa-sort-down"></i> </a>
+		  <div class="dropdown-content">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+		  </div>
+    </li>
+    
+    <li class="dropdown">
+		  <a href="" class="dropbtn">Computers <i class="fas fa-sort-down"></i> </a>
+		  <div class="dropdown-content">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+		  </div>
+    </li>
 
-					<div class="col-md-3">
-					    <div class="product-top">
-					        <a href="product.html"><img src="images/product2.jpg"></a>
-					        <div class="overlay-right">
-					        <button type="button" class="btn btn-secondary" title="Quick Shop">
-					           <i class="fa fa-eye"></i> 
-					        </button>
-					        <button type="button" class="btn btn-secondary" title="Add to Wishlist">
-					           <i class="fa fa-heart-o"></i> 
-					        </button>
-					            <button type="button" class="btn btn-secondary" title="Add to Cart">
-					           <i class="fa fa-shopping-cart"></i> 
-					        </button>
-					        </div>
-					    </div>
+    <li class="dropdown">
+		  <a href="" class="dropbtn">Mobiles <i class="fas fa-sort-down"></i> </a>
+		  <div class="dropdown-content">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+		  </div>
+		</li>
+	</ul> -->
 
-					    <div class="product-bottom text-center">
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					        <h3>Smart Watch</h3>
-					        <h5>&#x9f3 1050.00</h5>
-					    </div>
-					</div>
-
-					<div class="col-md-3">
-					    <div class="product-top">
-					        <a href="product.html"><img src="images/product3.jpg"></a>
-					        <div class="overlay-right">
-					        <button type="button" class="btn btn-secondary" title="Quick Shop">
-					           <i class="fa fa-eye"></i> 
-					        </button>
-					        <button type="button" class="btn btn-secondary" title="Add to Wishlist">
-					           <i class="fa fa-heart-o"></i> 
-					        </button>
-					            <button type="button" class="btn btn-secondary" title="Add to Cart">
-					           <i class="fa fa-shopping-cart"></i> 
-					        </button>
-					        </div>
-					    </div>
-
-					    <div class="product-bottom text-center">
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					        <h3>Formal Shoe</h3>
-					        <h5>&#x9f3 2000.00</h5>
-					    </div>
-					</div>
-
-					<div class="col-md-3">
-					    <div class="product-top">
-					        <a href="product.html"><img src="images/product4.jpg"></a>
-					        <div class="overlay-right">
-					        <button type="button" class="btn btn-secondary" title="Quick Shop">
-					           <i class="fa fa-eye"></i> 
-					        </button>
-					        <button type="button" class="btn btn-secondary" title="Add to Wishlist">
-					           <i class="fa fa-heart-o"></i> 
-					        </button>
-					            <button type="button" class="btn btn-secondary" title="Add to Cart">
-					           <i class="fa fa-shopping-cart"></i> 
-					        </button>
-					        </div>
-					    </div>
-
-					    <div class="product-bottom text-center">
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					        <h3>Smart Watch</h3>
-					        <h5>&#x9f3 1550.00</h5>
-					    </div>
-					</div>
-
-				</div>
-
-				<div class="row">
-					<div class="col-md-3">
-					    <div class="product-top">
-					        <a href="product.html"><img src="images/product1.jpg"></a> 
-					        <div class="overlay-right">
-					        <button type="button" class="btn btn-secondary" title="Quick Shop">
-					           <i class="fa fa-eye"></i> 
-					        </button>
-					        <button type="button" class="btn btn-secondary" title="Add to Wishlist">
-					           <i class="fa fa-heart-o"></i> 
-					        </button>
-					            <button type="button" class="btn btn-secondary" title="Add to Cart">
-					           <i class="fa fa-shopping-cart"></i> 
-					        </button>
-					        </div>
-					    </div>
-					    <div class="product-bottom text-center">
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star-half-o"></i>  
-					        <h3>Fitness Watch</h3>
-					        <h5>&#x9f3 850.00</h5>
-					    </div>
-					</div>
-
-					<div class="col-md-3">
-					    <div class="product-top">
-					        <a href="product.html"><img src="images/product2.jpg"></a>
-					        <div class="overlay-right">
-					        <button type="button" class="btn btn-secondary" title="Quick Shop">
-					           <i class="fa fa-eye"></i> 
-					        </button>
-					        <button type="button" class="btn btn-secondary" title="Add to Wishlist">
-					           <i class="fa fa-heart-o"></i> 
-					        </button>
-					            <button type="button" class="btn btn-secondary" title="Add to Cart">
-					           <i class="fa fa-shopping-cart"></i> 
-					        </button>
-					        </div>
-					    </div>
-
-					    <div class="product-bottom text-center">
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					        <h3>Smart Watch</h3>
-					        <h5>&#x9f3 1050.00</h5>
-					    </div>
-					</div>
-
-					<div class="col-md-3">
-					    <div class="product-top">
-					        <a href="product.html"><img src="images/product3.jpg"></a>
-					        <div class="overlay-right">
-					        <button type="button" class="btn btn-secondary" title="Quick Shop">
-					           <i class="fa fa-eye"></i> 
-					        </button>
-					        <button type="button" class="btn btn-secondary" title="Add to Wishlist">
-					           <i class="fa fa-heart-o"></i> 
-					        </button>
-					            <button type="button" class="btn btn-secondary" title="Add to Cart">
-					           <i class="fa fa-shopping-cart"></i> 
-					        </button>
-					        </div>
-					    </div>
-
-					    <div class="product-bottom text-center">
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					        <h3>Formal Shoe</h3>
-					        <h5>&#x9f3 2000.00</h5>
-					    </div>
-					</div>
-
-					<div class="col-md-3">
-					    <div class="product-top">
-					        <a href="product.html"><img src="images/product4.jpg"></a>
-					        <div class="overlay-right">
-					        <button type="button" class="btn btn-secondary" title="Quick Shop">
-					           <i class="fa fa-eye"></i> 
-					        </button>
-					        <button type="button" class="btn btn-secondary" title="Add to Wishlist">
-					           <i class="fa fa-heart-o"></i> 
-					        </button>
-					            <button type="button" class="btn btn-secondary" title="Add to Cart">
-					           <i class="fa fa-shopping-cart"></i> 
-					        </button>
-					        </div>
-					    </div>
-
-					    <div class="product-bottom text-center">
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					      <i class="fa fa-star"></i>  
-					        <h3>Smart Watch</h3>
-					        <h5>&#x9f3 1550.00</h5>
-					    </div>
-					</div>
-
-				</div>
-			</div>
-			
-		</section>
+  <div class="category-nav">
+    <ul class="categories">
+      <li class="category-item" ><span id="item-men" class="diff_font">Men</span> <i class="fas fa-sort-down"></i> </li>
+      <li class="category-item" ><span id="item-women" class="diff_font">Women</span> <i class="fas fa-sort-down"></i> </li>
+      <li class="category-item" id="item-electronics"><span class="diff_font">Electronics</span> <i class="fas fa-sort-down"></i></li>
+      <li class="category-item" id="item-furnitures"><span class="diff_font">Furniture</span> <i class="fas fa-sort-down"></i></li>
+      <li class="category-item" id="item-home"><span class="diff_font">Home & Kitchen</span> <i class="fas fa-sort-down"></i></li>
+      <li class="category-item" id="books"><span class="diff_font">Books & Magezines</span> <i class="fas fa-sort-down"></i></li>
+      <li class="category-item" id="gym"><span class="diff_font">Fitness & Gym</span> <i class="fas fa-sort-down"></i></li>
+    </ul>
+  </div>
 
 
-		<section class="website-features">
-			<div class="container">
-				<div class="title-box">
-					<h2>Our Services</h2>
-				</div>
-			<div class="row">
-				<div class="col-md-3 feature-box">
-					<img src="images/feature-1.png"> 
-					<div class="feature-text">
-					<p><b>100% Original items </b>are available at company.</p>    
-					</div>
-				</div>  
-				<div class="col-md-3 feature-box">
-					<img src="images/feature-2.png"> 
-					<div class="feature-text">
-					<p><b>Return within 30 days </b>of receiving your order.</p>    
-					</div>
-				</div> 
-				<div class="col-md-3 feature-box">
-					<img src="images/feature-3.png"> 
-					<div class="feature-text">
-					<p><b>Get free delivery for every </b>order on more than price.</p>    
-					</div>
-				</div>
-					<div class="col-md-3 feature-box">
-					<img src="images/feature-4.png"> 
-					<div class="feature-text">
-					<p><b>Pay Online through multiple </b>options (Card/Net banking).</p>    
-					</div>
-				</div> 
-			</div>    
-			</div>    
-		</section>
 
-		<!------------Footer----------->
-
-		<section class="footer">
-		<div class="container tex-center">
-		    <div class="row">
-		        <div class="col-md-3">
-		            <h1>Useful Links</h1>
-		            <ul>
-			            <li><a href="#">Privacy Policy</a></li>
-			            <li><a href="#">Terms of Use</a></li>
-			            <li><a href="#">Return Policy</a></li>
-			            <li><a href="#">Discount Coupons</a></li>
-			        </ul>
-		        </div>
-		        
-		        <div class="col-md-3">
-		            <h1>Company</h1>
-		            <ul>
-				        <li><a href="#">About Us</a></li>   
-				        <li><a href="#">Contact Us</a></li>    
-				        <li><a href="#">Career</a></li>
-				        <li><a href="#">Affiliate</a></li>
-				    </ul>
-		        </div>      
-		        <div class="col-md-3">
-		            <h1>Follow Us On</h1>
-		            <ul>
-		            	<li><a href="https://www.facebook.com"><i onclick="location.href='https://www.facebook.com'" class="fa fa-facebook-official"></i> Facebook</a></li>
-		           		<li><a href="https://www.youtube.com"><i onclick="location.href='https://www.youtube.com'" class="fa fa-youtube-play"></i> YouTube</a></li>
-		            	<li><a href="https://www.linkedin.com"><i onclick="location.href='https://www.linkedin.com'" class="fa fa-linkedin"></i> Linkedin</a></li>
-		            	<li><a href="https://www.twitter.com"><i onclick="location.href='https://www.twitter.com'" class="fa fa-twitter"></i> Twitter</a></li>
-		            </ul>
-		        </div>
-		        <div class="col-md-3 footer-image">
-		            <h1>Download App</h1>
-		            <a href="https://play.google.com/"><img src="images/google app.png"></a>
-		            <a href="https://www.apple.com/"><img src="images/apple app.png"></a>
-		        </div>
-		    </div>
-		    <hr>
-		    <p class="copyright">Made with <i class="fa fa-heart-o"></i> by Shuvo & Hasan</p>
-		</div>    
-		</section>
+<!-- SUB CATEGORY -->
 
 
-</body>
+<div class="container-fluid item-men">
+  <div class="container  border border-secondary">
+    <ul class="sub-categories">
+      <li class="sub-category__item"><a href="">Men Hats</a></li>
+      <li class="sub-category__item"><a href="">Pants</a></li>
+      <li class="sub-category__item"><a href="">Suits</a></li>
+      <li class="sub-category__item"><a href="">Shirts</a></li>
+      <li class="sub-category__item"><a href="">T-shirts</a></li>
+    </ul>
+
+    <ul class="sub-categories">
+      <li class="sub-category__item"><a href="">Shoes</a></li>
+      <li class="sub-category__item"><a href="">Bags & Wallets</a></li>
+      <li class="sub-category__item"><a href="">Watches</a></li>
+      <li class="sub-category__item"><a href="">Glasses</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="container-fluid item-women">
+  <div class="container border border-secondary">
+    <ul class="sub-categories">
+      <li class="sub-category__item"><a href="">Hats</a></li>
+      <li class="sub-category__item"><a href="">Pants</a></li>
+      <li class="sub-category__item"><a href="">Suits</a></li>
+      <li class="sub-category__item"><a href="">Shirts</a></li>
+      <li class="sub-category__item"><a href="">T-shirts</a></li>
+    </ul>
+
+    <ul class="sub-categories">
+      <li class="sub-category__item"><a href="">Shoes</a></li>
+      <li class="sub-category__item"><a href="">Bags & Wallets</a></li>
+      <li class="sub-category__item"><a href="">Watches</a></li>
+      <li class="sub-category__item"><a href="">Glasses</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- SUB CATEGORY ENDS -->
+
+    <section class="new-products">
+      <div class="container">
+        <p class="lead" id="title"></p>
+        <div class="row" id="selected_products">
+          <!-- Added in js -->
+        </div>
+      </div>
+    </section>
+
+    <section class="website-features">
+      <div class="container">
+        <div class="title-box">
+          <h2>Our Services</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-3 feature-box">
+            <img src="images/feature-1.png" />
+            <div class="feature-text">
+              <p><b>100% Original items </b>are available at company.</p>
+            </div>
+          </div>
+          <div class="col-md-3 feature-box">
+            <img src="images/feature-2.png" />
+            <div class="feature-text">
+              <p><b>Return within 30 days </b>of receiving your order.</p>
+            </div>
+          </div>
+          <div class="col-md-3 feature-box">
+            <img src="images/feature-3.png" />
+            <div class="feature-text">
+              <p>
+                <b>Get free delivery for every </b>order on more than price.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 feature-box">
+            <img src="images/feature-4.png" />
+            <div class="feature-text">
+              <p>
+                <b>Pay Online through multiple </b>options (Card/Net banking).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------Footer----------->
+
+    <section class="footer">
+      <div class="container tex-center">
+        <div class="row">
+          <div class="col-md-3">
+            <h1>Useful Links</h1>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Return Policy</a></li>
+              <li><a href="#">Discount Coupons</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3">
+            <h1>Company</h1>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Affiliate</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h1>Follow Us On</h1>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com"
+                  ><i
+                    onclick="location.href='https://www.facebook.com'"
+                    class="fa fa-facebook-official"
+                  ></i>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://www.youtube.com"
+                  ><i
+                    onclick="location.href='https://www.youtube.com'"
+                    class="fa fa-youtube-play"
+                  ></i>
+                  YouTube</a
+                >
+              </li>
+              <li>
+                <a href="https://www.linkedin.com"
+                  ><i
+                    onclick="location.href='https://www.linkedin.com'"
+                    class="fa fa-linkedin"
+                  ></i>
+                  Linkedin</a
+                >
+              </li>
+              <li>
+                <a href="https://www.twitter.com"
+                  ><i
+                    onclick="location.href='https://www.twitter.com'"
+                    class="fa fa-twitter"
+                  ></i>
+                  Twitter</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-image">
+            <h1>Download App</h1>
+            <a href="https://play.google.com/"
+              ><img src="images/google app.png"
+            /></a>
+            <a href="https://www.apple.com/"
+              ><img src="images/apple app.png"
+            /></a>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">
+          Made with <i class="fa fa-heart-o"></i> by Shuvo & Hasan
+        </p>
+      </div>
+    </section>
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/productsByCategory.js"></script>
+    <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/totalItem.js"></script>
+    <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
+
+  </body>
 </html>

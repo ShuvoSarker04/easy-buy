@@ -19,7 +19,7 @@
 			<i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
 
 			<a href="index.html"> <img src="images/logo.png" class="logo"> </a>
-			<input type="text" class="form-control">
+			<input type="text" class="form-control" onkeyup="searchProducts()" id="searchbox">
 			<span class="input-group-text"><i class="fa fa-search"></i></span>
 		</div>
 
@@ -34,7 +34,75 @@
 	<section class="header">
 		<div class="side-menu" id="side-menu">
 			<ul>
-				<li>On sale <i class="fa fa-angle-right"></i>
+				<li>ON SALE<i class="fa fa-angle-right"></i>
+					<ul>
+						<a href="sideproducts.html?category=watch&&sub-category=fitness-watch&&sale=true">
+							<li>Fitness watch</li>
+						</a>
+						<a href="sideproducts.html?category=shoe&&sub-category=formal-shoe&&sale=true">
+							<li>Formal shoe</li>
+						</a>
+						<a href="sideproducts.html?category=bag&&sub-category=wallet&&sale=true">
+							<li>Wallet</li>
+						</a>
+						<a href="sideproducts.html?category=furniture&&sub-category=gaming-chair&&sale=true">
+							<li>Chair</li>
+						</a>
+					</ul>
+				</li>
+
+				<li>Men<i class="fa fa-angle-right"></i>
+					<ul>
+						<a href="sideproducts.html?gender=men&&category=shoe">
+							<li>Shoes</li>
+						</a>
+						<a href="sideproducts.html?gender=men&&category=cloth&&sub-category=t-shirt">
+							<li>Cloths</li>
+						</a>
+						<a href="sideproducts.html?gender=men&&category=bag&&sub-category=backpack">
+							<li>Bags</li>
+						</a>
+						<a href="sideproducts.html?gender=men&&category=watch&&sub-category=luxury-watch">
+							<li>Watchs</li>
+						</a>
+					</ul>
+				</li>
+
+				<li>Women<i class="fa fa-angle-right"></i>
+					<ul>
+						<a href="sideproducts.html?gender=women&&category=shoe&&sub-category=heels">
+							<li>Shoes</li>
+						</a>
+						<a href="sideproducts.html?gender=women&&category=cloth&&sub-category=shirts">
+							<li>Cloths</li>
+						</a>
+						<a href="sideproducts.html?gender=women&&category=bag&&sub-category=handbag">
+							<li>Bags</li>
+						</a>
+						<a href="sideproducts.html?gender=women&&category=watch&&sub-category=luxury-watch">
+							<li>Watchs</li>
+						</a>
+					</ul>
+				</li>
+
+				<li>Electronics<i class="fa fa-angle-right"></i>
+					<ul>
+						<a href="sideproducts.html?category=electronics&&sub-category=monitor">
+							<li>Monitor</li>
+						</a>
+						<a href="sideproducts.html?category=electronics&&sub-category=graphics-card">
+							<li>Graphics Card</li>
+						</a>
+						<a href="sideproducts.html?category=bag&&sub-category=wallet">
+							<li>Sub Menu-3</li>
+						</a>
+						<a href="sideproducts.html?category=bag&&sub-category=wallet">
+							<li>Sub Menu-4</li>
+						</a>
+					</ul>
+				</li>
+
+				<li>Furnitures<i class="fa fa-angle-right"></i>
 					<ul>
 						<a href="sideproducts.html">
 							<li>Sub Menu-1</li>
@@ -51,7 +119,7 @@
 					</ul>
 				</li>
 
-				<li>Mobiles<i class="fa fa-angle-right"></i>
+				<li>Home & Kitchen<i class="fa fa-angle-right"></i>
 					<ul>
 						<a href="sideproducts.html">
 							<li>Sub Menu-1</li>
@@ -68,7 +136,7 @@
 					</ul>
 				</li>
 
-				<li>Computers <i class="fa fa-angle-right"></i>
+				<li>Books & Magazines<i class="fa fa-angle-right"></i>
 					<ul>
 						<a href="sideproducts.html">
 							<li>Sub Menu-1</li>
@@ -85,160 +153,7 @@
 					</ul>
 				</li>
 
-				<li>Books <i class="fa fa-angle-right"></i>
-					<ul>
-						<a href="sideproducts.html">
-							<li>Sub Menu-1</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-2</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-3</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-4</li>
-						</a>
-					</ul>
-				</li>
-
-				<li>Fitness <i class="fa fa-angle-right"></i>
-					<ul>
-						<a href="sideproducts.html">
-							<li>Sub Menu-1</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-2</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-3</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-4</li>
-						</a>
-					</ul>
-				</li>
-
-				<li>Baby Care <i class="fa fa-angle-right"></i>
-					<ul>
-						<a href="sideproducts.html">
-							<li>Sub Menu-1</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-2</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-3</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-4</li>
-						</a>
-					</ul>
-				</li>
-
-				<li>Magazines <i class="fa fa-angle-right"></i>
-					<ul>
-						<a href="sideproducts.html">
-							<li>Sub Menu-1</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-2</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-3</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-4</li>
-						</a>
-					</ul>
-				</li>
-
-				<li>Auto Accessories <i class="fa fa-angle-right"></i>
-					<ul>
-						<a href="sideproducts.html">
-							<li>Sub Menu-1</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-2</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-3</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-4</li>
-						</a>
-					</ul>
-				</li>
-
-				<li>Movies and Music <i class="fa fa-angle-right"></i>
-					<ul>
-						<a href="sideproducts.html">
-							<li>Sub Menu-1</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-2</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-3</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-4</li>
-						</a>
-					</ul>
-				</li>
-
-				<li>Video and Games <i class="fa fa-angle-right"></i>
-					<ul>
-						<a href="sideproducts.html">
-							<li>Sub Menu-1</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-2</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-3</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-4</li>
-						</a>
-					</ul>
-				</li>
-
-				<li>Home and Kitchen <i class="fa fa-angle-right"></i>
-					<ul>
-						<a href="sideproducts.html">
-							<li>Sub Menu-1</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-2</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-3</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-4</li>
-						</a>
-					</ul>
-				</li>
-
-				<li>Furniture <i class="fa fa-angle-right"></i>
-					<ul>
-						<a href="sideproducts.html">
-							<li>Sub Menu-1</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-2</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-3</li>
-						</a>
-						<a href="sideproducts.html">
-							<li>Sub Menu-4</li>
-						</a>
-					</ul>
-				</li>
-
-				<li>Grocery <i class="fa fa-angle-right"></i>
+				<li>Fitness & Gym<i class="fa fa-angle-right"></i>
 					<ul>
 						<a href="sideproducts.html">
 							<li>Sub Menu-1</li>
@@ -291,6 +206,7 @@
 
 	<!-- Featured categories --->
 
+	<div id="all-products">
 	<section class="featured-categories">
 
 		<div class="container">
@@ -341,13 +257,8 @@
 						</div>
 					</div>
 					<div class="product-bottom text-center">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-half-o"></i>
-						<h3>Fitness Watch</h3>
-						<h5>&#x9f3 850.00</h5>
+						<h3>Nike H86 Futura Chambray Cap</h3>
+						<h5>&#x9f3 1100.00</h5>
 					</div>
 				</div>
 
@@ -367,14 +278,9 @@
 						</div>
 					</div>
 
-					<div class="product-bottom text-center">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<h3>Smart Watch</h3>
-						<h5>&#x9f3 1050.00</h5>
+					<div class="product-bottom text-center">	
+						<h3>Fossil Quinn Bifold Flip ID</h3>
+						<h5>&#x9f3 1700.00</h5>
 					</div>
 				</div>
 
@@ -394,14 +300,9 @@
 						</div>
 					</div>
 
-					<div class="product-bottom text-center">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<h3>Formal Shoe</h3>
-						<h5>&#x9f3 2000.00</h5>
+					<div class="product-bottom text-center">						
+						<h3>Adidas Excel V Backpack</h3>
+						<h5>&#x9f3 2200.00</h5>
 					</div>
 				</div>
 
@@ -422,13 +323,8 @@
 					</div>
 
 					<div class="product-bottom text-center">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<h3>Smart Watch</h3>
-						<h5>&#x9f3 1550.00</h5>
+						<h3>Levis Mens 511 Slim</h3>
+						<h5>&#x9f3 2500.00</h5>
 					</div>
 				</div>
 
@@ -461,13 +357,8 @@
 						</div>
 					</div>
 					<div class="product-bottom text-center">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-half-o"></i>
-						<h3>Fitness Watch</h3>
-						<h5>&#x9f3 850.00</h5>
+						<h3>Ray-Ban Aviator Polarized 58mm</h3>
+						<h5>&#x9f3 6500.00</h5>
 					</div>
 				</div>
 
@@ -488,13 +379,8 @@
 					</div>
 
 					<div class="product-bottom text-center">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<h3>Smart Watch</h3>
-						<h5>&#x9f3 1050.00</h5>
+						<h3>Nike Flex Experience Run 9</h3>
+						<h5>&#x9f3 17500.00</h5>
 					</div>
 				</div>
 
@@ -515,13 +401,8 @@
 					</div>
 
 					<div class="product-bottom text-center">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<h3>Formal Shoe</h3>
-						<h5>&#x9f3 2000.00</h5>
+						<h3>TREK</h3>
+						<h5>&#x9f3 15500.00</h5>
 					</div>
 				</div>
 
@@ -542,13 +423,8 @@
 					</div>
 
 					<div class="product-bottom text-center">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<h3>Smart Watch</h3>
-						<h5>&#x9f3 1550.00</h5>
+						<h3>MSI Mag-CH110 Gaming Chair</h3>
+						<h5>&#x9f3 10500.00</h5>
 					</div>
 				</div>
 
@@ -571,13 +447,8 @@
 						</div>
 					</div>
 					<div class="product-bottom text-center">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-half-o"></i>
-						<h3>Fitness Watch</h3>
-						<h5>&#x9f3 850.00</h5>
+						<h3>HP Anti-Glare Full-HD 21.5 Inch Monitor</h3>
+						<h5>&#x9f3 9500.00</h5>
 					</div>
 				</div>
 
@@ -598,13 +469,8 @@
 					</div>
 
 					<div class="product-bottom text-center">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<h3>Smart Watch</h3>
-						<h5>&#x9f3 1050.00</h5>
+						<h3>Polo T-shirt</h3>
+						<h5>&#x9f3 500.00</h5>
 					</div>
 				</div>
 
@@ -625,13 +491,8 @@
 					</div>
 
 					<div class="product-bottom text-center">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<h3>Formal Shoe</h3>
-						<h5>&#x9f3 2000.00</h5>
+						<h3>Bata Vagabond Tripper</h3>
+						<h5>&#x9f3 1500.00</h5>
 					</div>
 				</div>
 
@@ -652,13 +513,8 @@
 					</div>
 
 					<div class="product-bottom text-center">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<h3>Smart Watch</h3>
-						<h5>&#x9f3 1550.00</h5>
+						<h3>Fitness watch</h3>
+						<h5>&#x9f3 1500.00</h5>
 					</div>
 				</div>
 
@@ -702,7 +558,7 @@
 			</div>
 		</div>
 	</section>
-
+</div>
 	<!------------Footer----------->
 
 	<section class="footer">
@@ -766,6 +622,7 @@
 			document.getElementById("close-btn").style.display = "none";
 		}
 	</script>
+		
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 

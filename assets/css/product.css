@@ -1,4 +1,4 @@
-img{
+.selected_Product_Image{
     /* position: absolute; */
     /* left: 50%;
     transform: translateX(50%, 50%); */
@@ -6,4 +6,10 @@ img{
     display: block;
     height: 400px;
     object-fit: contain;
+}
+.carousel-control-next-icon {
+    background-image: url("https://image.flaticon.com/icons/svg/709/709586.svg");
+}
+.carousel-control-prev-icon {
+    background-image: url("https://image.flaticon.com/icons/svg/892/892512.svg");
 }
