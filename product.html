@@ -14,21 +14,25 @@
   <body>
     <!--Navigation Bar-->
 
+    
     <div class="top-nav-bar">
-      <div class="search-box">
+    	<div class="search-box">
+
         <i class="fa fa-bars" id="menu-btn" onclick="openmenu()"></i>
         <i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
-
-        <a href="index.html"> <img src="images/logo.png" class="logo" /> </a>
-        <input type="text" class="form-control" />
+  
+        <a href="index.html"> <img src="images/logo.png" class="logo"> </a>
+        <input type="text" class="form-control" onkeyup="searchProducts()" id="searchbox">
         <span class="input-group-text"><i class="fa fa-search"></i></span>
       </div>
-
       <div class="menu-bar" id="menuContent"><!-- Added in navbar.js-->></div>
     </div>
 
     <!-------------Single Product------------->
-
+    <div  id="all-products"></div>
+  
+  
+    <div class="contents">
     <section class="single-product">
       <div class="container">
         <div class="row">
@@ -113,6 +117,9 @@
         </div>
       </div>
     </section>
+  
+  </div>
+
   
     <!------------Footer----------->
   

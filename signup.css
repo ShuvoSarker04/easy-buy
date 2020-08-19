@@ -3,11 +3,52 @@
 *{
   font-family: 'Baloo Da 2', cursive !important;
 }
+body{
+  font-weight: 400;
+  font-size: 14px;
+}
 
-
+.explore{
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin: auto;
+  width: 250px;
+  font-size: 25px;
+  outline: none;
+  background:#ee131e;
+  color: white;
+  border: none;
+  display: block;
+  padding-top: 300px !important;
+  margin-top: -220px;
+  margin-left: -190px;
+  transform: rotate(-48deg);
+  font-size: 20px !important;
+}
+.explore:hover {
+  background-color: #f14e57;
+}
+.explore a{
+  /* text-decoration: none; */
+  color: white;
+  display:block;
+  text-decoration: none;
+}
+.site-image{
+  background-image: url("./images/1111.png");
+  background-position: left;
+  width: 60%;
+  height: 100%;
+  margin-left: -5%;
+  position: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: -100px;
+}
 /* ==========================================================================
    #GRID
    ==========================================================================*/
+
 .row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -70,7 +111,7 @@
 }
 
 .form-row .name {
-  width: 125px;
+  width: 100%;
   color: #555;
   font-size: 15px;
   font-weight: 700;
@@ -227,12 +268,8 @@ button {
 .page-wrapper {
   min-height: 100vh;
   padding: 30px;
-}
-
-body {
-  font-family: 'Baloo Da 2', cursive !important;
-  font-weight: 400;
-  font-size: 14px;
+  float: right;
+  margin-right: 18%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -328,7 +365,7 @@ h6 {
    #WRAPPER
    ========================================================================== */
 .wrapper {
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .wrapper--w960 {
@@ -336,7 +373,8 @@ h6 {
 }
 
 .wrapper--w790 {
-  max-width: 790px;
+  /* max-width: 00px; */
+  width: 300px;
 }
 
 .wrapper--w780 {
@@ -448,7 +486,7 @@ input {
 
 .input--style-5 {
   background: #e5e5e5;
-  line-height: 50px;
+  line-height: 40px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -609,7 +647,7 @@ input {
 
 .card-5 {
   background: #fff;
-  width: 750px;
+  width: 500px;
   margin: auto;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -631,8 +669,8 @@ input {
 }
 
 .card-5 .card-body {
-  padding: 52px 85px;
-  padding-bottom: 73px;
+  width: 114%;
+  padding: 20px 0 51px 50px;
 }
 
 @media (max-width: 767px) {

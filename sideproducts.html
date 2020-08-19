@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Products</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
 	  <link rel="stylesheet" href="./assets/css/categorybar.css">
@@ -15,125 +16,72 @@
         <i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
 
         <a href="index.html"> <img src="images/logo.png" class="logo" /> </a>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" onkeyup="searchProducts()" id="searchbox" />
         <span class="input-group-text"><i class="fa fa-search"></i></span>
       </div>
 
       <div class="menu-bar" id="menuContent"><!-- Added in navbar.js--></div>
     </div>
-	
+  
+    <div  id="all-products"></div>
 
-	<!-- <ul class="category">
-    
-    <li class="dropdown">
-		  <a href="" class="dropbtn">Men <i class="fas fa-sort-down"></i> </a>
-		  <div class="dropdown-content">
-			<a href="#">Link 1</a>
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-		  </div>
-    </li>
-    
-    <li class="dropdown">
-		  <a href="" class="dropbtn">Women <i class="fas fa-sort-down"></i>  </a>
-		  <div class="dropdown-content">
-			<a href="#">Link 1</a>
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-		  </div>
-    </li>
-    <li class="dropdown">
-		  <a href="" class="dropbtn">Bags/Wallet <i class="fas fa-sort-down"></i> </a>
-		  <div class="dropdown-content">
-			<a href="#">Link 1</a>
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-		  </div>
-    </li>
-    
-		<li class="dropdown">
-		  <a href="" class="dropbtn">Shoes <i class="fas fa-sort-down"></i> </a>
-		  <div class="dropdown-content">
-			<a href="#">Link 1</a>
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-		  </div>
-    </li>
-    
-    <li class="dropdown">
-		  <a href="" class="dropbtn">Computers <i class="fas fa-sort-down"></i> </a>
-		  <div class="dropdown-content">
-			<a href="#">Link 1</a>
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-		  </div>
-    </li>
+    <div class="contents">
 
-    <li class="dropdown">
-		  <a href="" class="dropbtn">Mobiles <i class="fas fa-sort-down"></i> </a>
-		  <div class="dropdown-content">
-			<a href="#">Link 1</a>
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-		  </div>
-		</li>
-	</ul> -->
-
-  <div class="category-nav">
-    <ul class="categories">
-      <li class="category-item" ><span id="item-men" class="diff_font">Men</span> <i class="fas fa-sort-down"></i> </li>
-      <li class="category-item" ><span id="item-women" class="diff_font">Women</span> <i class="fas fa-sort-down"></i> </li>
-      <li class="category-item" id="item-electronics"><span class="diff_font">Electronics</span> <i class="fas fa-sort-down"></i></li>
-      <li class="category-item" id="item-furnitures"><span class="diff_font">Furniture</span> <i class="fas fa-sort-down"></i></li>
-      <li class="category-item" id="item-home"><span class="diff_font">Home & Kitchen</span> <i class="fas fa-sort-down"></i></li>
-      <li class="category-item" id="books"><span class="diff_font">Books & Magezines</span> <i class="fas fa-sort-down"></i></li>
-      <li class="category-item" id="gym"><span class="diff_font">Fitness & Gym</span> <i class="fas fa-sort-down"></i></li>
-    </ul>
-  </div>
+      <div class="category-nav">
+        <ul class="categories">
+          <li class="category-item" ><span id="item-men" class="diff_font">Men</span> <i class="fas fa-sort-down"></i> </li>
+          <li class="category-item" ><span id="item-women" class="diff_font">Women</span> <i class="fas fa-sort-down"></i> </li>
+          <li class="category-item" id="item-electronics"><span class="diff_font">Electronics</span> <i class="fas fa-sort-down"></i></li>
+          <li class="category-item" id="item-furnitures"><span class="diff_font">Furniture</span> <i class="fas fa-sort-down"></i></li>
+          <li class="category-item" id="item-home"><span class="diff_font">Home & Kitchen</span> <i class="fas fa-sort-down"></i></li>
+          <li class="category-item" id="books"><span class="diff_font">Books & Magezines</span> <i class="fas fa-sort-down"></i></li>
+          <li class="category-item" id="gym"><span class="diff_font">Fitness & Gym</span> <i class="fas fa-sort-down"></i></li>
+        </ul>
+      </div>
 
 
 
-<!-- SUB CATEGORY -->
+    <!-- SUB CATEGORY -->
 
 
-<div class="container-fluid item-men">
-  <div class="container  border border-secondary">
-    <ul class="sub-categories">
-      <li class="sub-category__item"><a href="">Men Hats</a></li>
-      <li class="sub-category__item"><a href="">Pants</a></li>
-      <li class="sub-category__item"><a href="">Suits</a></li>
-      <li class="sub-category__item"><a href="">Shirts</a></li>
-      <li class="sub-category__item"><a href="">T-shirts</a></li>
-    </ul>
+    <div class="container-fluid item-men">
+      <div class="container  border border-secondary">
+        <ul class="sub-categories">
+          <li class="sub-category__item"><a href="sideproducts.html?gender=men&&category=shoe">Shoes</a></li>
+          <li class="sub-category__item"><a href="sideproducts.html?gender=men&&category=cloth">Cloth</a></li>
+          <li class="sub-category__item"><a href="sideproducts.html?gender=men&&category=bag">Bags</a></li>
+          <li class="sub-category__item"><a href="sideproducts.html?gender=men&&category=watch">Watchs</a></li>
+          <li class="sub-category__item"><a href="sideproducts.html?gender=men&&category=hat">Hats</a></li>
+        </ul>
 
-    <ul class="sub-categories">
-      <li class="sub-category__item"><a href="">Shoes</a></li>
-      <li class="sub-category__item"><a href="">Bags & Wallets</a></li>
-      <li class="sub-category__item"><a href="">Watches</a></li>
-      <li class="sub-category__item"><a href="">Glasses</a></li>
-    </ul>
-  </div>
-</div>
+        <ul class="sub-categories">
+          <li class="sub-category__item"><a href="sideproducts.html?gender=men&&category=shoe">Shoes</a></li>
+          <li class="sub-category__item"><a href="sideproducts.html?gender=men&&category=cloth">Cloth</a></li>
+          <li class="sub-category__item"><a href="sideproducts.html?gender=men&&category=bag">Bags</a></li>
+          <li class="sub-category__item"><a href="sideproducts.html?gender=men&&category=watch">Watchs</a></li>
+        </ul>
+      </div>
+    </div>
 
 
-<div class="container-fluid item-women">
-  <div class="container border border-secondary">
-    <ul class="sub-categories">
-      <li class="sub-category__item"><a href="">Hats</a></li>
-      <li class="sub-category__item"><a href="">Pants</a></li>
-      <li class="sub-category__item"><a href="">Suits</a></li>
-      <li class="sub-category__item"><a href="">Shirts</a></li>
-      <li class="sub-category__item"><a href="">T-shirts</a></li>
-    </ul>
+    <div class="container-fluid item-women">
+      <div class="container border border-secondary">
+        <ul class="sub-categories">
+          <li class="sub-category__item"><a href="">Hats</a></li>
+          <li class="sub-category__item"><a href="">Pants</a></li>
+          <li class="sub-category__item"><a href="">Suits</a></li>
+          <li class="sub-category__item"><a href="">Shirts</a></li>
+          <li class="sub-category__item"><a href="">T-shirts</a></li>
+        </ul>
 
-    <ul class="sub-categories">
-      <li class="sub-category__item"><a href="">Shoes</a></li>
-      <li class="sub-category__item"><a href="">Bags & Wallets</a></li>
-      <li class="sub-category__item"><a href="">Watches</a></li>
-      <li class="sub-category__item"><a href="">Glasses</a></li>
-    </ul>
-  </div>
-</div>
+        <ul class="sub-categories">
+          <li class="sub-category__item"><a href="">Shoes</a></li>
+          <li class="sub-category__item"><a href="">Bags & Wallets</a></li>
+          <li class="sub-category__item"><a href="">Watches</a></li>
+          <li class="sub-category__item"><a href="">Glasses</a></li>
+        </ul>
+      </div>
+    </div>
 
 <!-- SUB CATEGORY ENDS -->
 
@@ -183,6 +131,11 @@
         </div>
       </div>
     </section>
+    </div>
+
+    
+
+
 
     <!------------Footer----------->
 

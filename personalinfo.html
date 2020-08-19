@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./assets/css/peronalinfo.css">
+  <link rel="stylesheet" href="style.css">
   <title>My Account</title>
 </head>
 
@@ -16,7 +17,7 @@
       <i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
 
       <a href="index.html"> <img src="images/logo.png" class="logo"> </a>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" onkeyup="searchProducts()" id="searchbox">
       <span class="input-group-text"><i class="fa fa-search"></i></span>
     </div>
 
@@ -25,6 +26,10 @@
     </div>
   </div>
 
+
+  <div  id="all-products"></div>
+
+  <div class="contents">
   <div class="container">
     <form class="basicinfo">
       <div class="form-row">
@@ -89,7 +94,7 @@
     </form>
 
   </div>
-
+  </div>
 
   <!------Website features------->
 

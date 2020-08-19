@@ -119,6 +119,6 @@ function searchProducts(){
 }else{
 	location.reload();
 }
-	}
+}
 
 

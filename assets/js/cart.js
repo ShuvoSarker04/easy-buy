@@ -81,9 +81,9 @@ document.querySelectorAll('input').forEach(e=>{
 
         let item = MyCart[productId];
         
-        if(quantity<1){
+        if(quantity<0){
             document.querySelector(`#price_${productId}`).innerHTML = `BDT ${MyCart[productId].sPrice}`;
-            event.target.value =1;
+            event.target.value =0;
         }else{
             event.target.value =quantity;
         //Increase price
@@ -164,6 +164,7 @@ document.querySelector('#charges').innerHTML = html;
 })}else{
     document.querySelector('#emptyCart').style.display="block";
     //let message = "Your cart is empty";
+    document.querySelector('#proceed').style.display = "none";
     document.querySelector('#emptyCart .message-img').src="https://tyjara.com/assets/site/img/empty-cart.png"
 }
 
