@@ -39,11 +39,11 @@ body{
   background-position: left;
   width: 60%;
   height: 100%;
-  margin-left: -5%;
+  margin-left: -60%;
   position: fixed;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-top: -100px;
+  margin-top: -40px;
 }
 /* ==========================================================================
    #GRID
