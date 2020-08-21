@@ -9,11 +9,11 @@ body{
 }
 
 .explore{
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
   margin: auto;
   width: 250px;
-  font-size: 25px;
+  font-size: 15px;
   outline: none;
   background:#ee131e;
   color: white;
@@ -22,33 +22,28 @@ body{
   padding-top: 300px !important;
   margin-top: -220px;
   margin-left: -190px;
-  transform: rotate(-48deg);
+  transform: rotate(-50deg);
   font-size: 20px !important;
 }
 .explore:hover {
   background-color: #f14e57;
 }
 .explore a{
-  /* text-decoration: none; */
   color: white;
   display:block;
   text-decoration: none;
 }
 .site-image{
-  background-image: url("./images/1111.png");
+  background-image: url("./images/100.jpg");
   background-position: left;
   width: 60%;
   height: 100%;
-  margin-left: -60%;
+  margin-left: -50%;
   position: fixed;
-  display: hide;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-top: -40px;
+  margin-top: -15px;
 }
-/* ==========================================================================
-   #GRID
-   ==========================================================================*/
 
 .row {
   display: -webkit-box;
@@ -190,13 +185,7 @@ body{
   }
 }
 
-/* ==========================================================================
-   #BOX-SIZING
-   ========================================================================== */
-/**
- * More sensible default box-sizing:
- * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
- */
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -214,12 +203,6 @@ html {
   box-sizing: inherit;
 }
 
-/* ==========================================================================
-   #RESET
-   ========================================================================== */
-/**
- * A very simple reset that sits on top of Normalize.css.
- */
 body,
 h1, h2, h3, h4, h5, h6,
 blockquote, p, pre,
@@ -231,29 +214,18 @@ fieldset, legend {
   padding: 0;
 }
 
-/**
- * Remove trailing margins from nested lists.
- */
 li > ol,
 li > ul {
   margin-bottom: 0;
 }
 
-/**
- * Remove default table spacing.
- */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/**
- * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
- *    on fieldsets.
- */
 fieldset {
   min-width: 0;
-  /* [1] */
   border: 0;
 }
 
@@ -263,9 +235,6 @@ button {
   border: none;
 }
 
-/* ==========================================================================
-   #PAGE WRAPPER
-   ========================================================================== */
 .page-wrapper {
   min-height: 100vh;
   padding: 30px;
@@ -301,15 +270,10 @@ h6 {
   font-size: 13px;
 }
 
-/* ==========================================================================
-   #BACKGROUND
-   ========================================================================== */
 .bg {
   background-color: #fff;
 }
-/* ==========================================================================
-   #SPACING
-   ========================================================================== */
+
 .p-t-100 {
   padding-top: 100px;
 }
@@ -362,19 +326,13 @@ h6 {
   margin-bottom: 55px;
 }
 
-/* ==========================================================================
-   #WRAPPER
-   ========================================================================== */
-.wrapper {
-  /* margin: 0 auto; */
-}
 
 .wrapper--w960 {
   max-width: 960px;
 }
 
 .wrapper--w790 {
-  /* max-width: 00px; */
+ 
   width: 300px;
 }
 
@@ -386,9 +344,7 @@ h6 {
   max-width: 680px;
 }
 
-/* ==========================================================================
-   #BUTTON
-   ========================================================================== */
+
 .btn {
   display: inline-block;
   line-height: 50px;
@@ -447,9 +403,6 @@ h6 {
   background: #207459;
 }
 
-/* ==========================================================================
-   #DATE PICKER
-   ========================================================================== */
 td.active {
   background-color: #2c6ed5;
 }
@@ -469,10 +422,6 @@ input[type="date" i] {
   height: 30px;
 }
 
-
-/* ==========================================================================
-   #FORM
-   ========================================================================== */
 input {
   outline: none;
   margin: 0;
@@ -532,9 +481,6 @@ input {
   left: 0;
 }
 
-/* ==========================================================================
-   #SELECT2
-   ========================================================================== */
 .select--no-search .select2-search {
   display: none !important;
 }
@@ -625,9 +571,7 @@ input {
   transform: rotate(-180deg);
 }
 
-/* ==========================================================================
-   #TITLE
-   ========================================================================== */
+
 .title {
   font-size: 24px;
   text-transform: uppercase;
@@ -636,9 +580,6 @@ input {
   color: #fff;
 }
 
-/* ==========================================================================
-   #CARD
-   ========================================================================== */
 .card {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -681,7 +622,6 @@ input {
   }
 }
 
-/* LOADING LOADING */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap');
 
 *{
@@ -712,3 +652,26 @@ input {
   
 }
 
+
+@media screen and (max-width: 1260px){
+  .site-image{
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1077px){
+  .site-image{
+    display: none;
+  }
+  .wrapper--w790 {
+    width: 550px;
+  }
+}
+@media screen and (max-width: 870px){
+  .card-body{
+    overflow: hidden !important;
+  }
+  .wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  }
+} 
