@@ -123,7 +123,8 @@ firebase
     })
 })
 
-}else{
+}
+if(sale){
 	console.log(category, sub_category)
 firebase
 .firestore()

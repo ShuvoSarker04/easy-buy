@@ -127,16 +127,6 @@ firebase
     
   });
 
-// firebase
-// .firestore().collection("products").where("category", "==", category)
-//     .get()
-//     .then(function(querySnapshot) {
-//         querySnapshot.forEach(function(doc) {
-//             // doc.data() is never undefined for query doc snapshots
-//             console.log(doc.id, " => ", doc.data());
-//         });
-//     })
-
 setTimeout(() => {
   const quantity = document.querySelector("#quantity");
   const addToCart = document.querySelector("#addToCart");
