@@ -3,10 +3,6 @@ const params = new URLSearchParams(window.location.search);
 let data;
 let category;
 
-
-
-
-
 const allProductsDiv = document.querySelector('#all-products');
 let allProductsArray = []; 
 
@@ -15,7 +11,6 @@ firebase.firestore().collection('products').get().then(products=>{
 		allProductsArray.push(product.data());
 	});
 })
-
 
 
 //Fetch Selected Item
@@ -60,15 +55,14 @@ firebase
     // Product Details
     let html = ` <p class="new-arrival text-center">${data.condition}</p>
     <h2>${data.name}</h2>
- <p>Product Code: ${data.productCode}</p>  
-    
- <p class="price">BDT &#x9f3 ${data.price}</p>
- <p><b>Availability:</b> ${data.stock}</p>
- <p><b>Condition:</b> ${data.condition}</p>
- <p><b>Brand/Company:</b> ${data.company}</p>
- <label>Quantity: </label>
- <input type="text" value="1" id="quantity">
- <button type="button" class="btn btn-primary" id="addToCart">Add to Cart</button>`;
+      <p>Product Code: ${data.productCode}</p>       
+      <p class="price">BDT &#x9f3 ${data.price}</p>
+      <p><b>Availability:</b> ${data.stock}</p>
+      <p><b>Condition:</b> ${data.condition}</p>
+      <p><b>Brand/Company:</b> ${data.company}</p>
+      <label>Quantity: </label>
+      <input type="text" value="1" id="quantity">
+      <button type="button" class="btn btn-primary" id="addToCart">Add to Cart</button>`;
 
     document.querySelector("#productDetails").innerHTML = html;
     document.querySelector("#description").innerHTML = data.description;
@@ -178,10 +172,6 @@ setTimeout(() => {
 });
   }
 }, 3000);
-
-
-
-
 
 function searchProducts(){
 	

@@ -7,14 +7,6 @@ signInForm.addEventListener('submit', function(e){
 
         email: document.querySelector('#email').value,
         password: document.querySelector('#password').value
-        // contact:{
-        //     mobile:document.querySelector('#mobile').value,
-        //     address:{
-        //         city:document.querySelector('#city').value,
-        //         country: document.querySelector('#country').value,
-        //         zip: document.querySelector('#zip').value
-        //     }
-        // }
     }
     let { email, password } = user;
     firebase.auth().signInWithEmailAndPassword(email, password)
@@ -34,7 +26,7 @@ signInForm.addEventListener('submit', function(e){
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log(errorMessage)
-        // ...
+     
         document.querySelector('.error').style.display="block";
         document.querySelector('.error p').innerHTML = "Please provide valid credentials";
         setTimeout(()=>{
@@ -60,7 +52,6 @@ resetForm.addEventListener('submit', (e)=>{
     .then(function() {
         alert('password reset email sent');
       }).catch(function(error) {
-        // An error happened.
         console.log(error)
       })
 });

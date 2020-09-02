@@ -86,12 +86,12 @@ document.querySelectorAll('input').forEach(e=>{
             event.target.value =0;
         }else{
             event.target.value =quantity;
+
         //Increase price
         console.log(`#price_${productId}`);
         let price = parseFloat(quantity*item.sPrice);
         document.querySelector(`#price_${productId}`).innerHTML = `BDT ${price}`;
-
-
+        
         //change in MyCart
         MyCart[productId].price = price;
         MyCart[productId].quantity = quantity;
@@ -169,7 +169,8 @@ document.querySelector('#charges').innerHTML = html;
 }
 
 
-}else{
+}
+else{
     let message = "Sign in to access cart";
     document.querySelector('#notLoggedIn .message-img').src = "https://i.pinimg.com/originals/81/c4/fc/81c4fc9a4c06cf57abf23606689f7426.jpg"
     document.querySelector('#notLoggedIn  .message').innerHTML = message;

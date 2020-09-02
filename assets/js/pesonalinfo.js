@@ -120,8 +120,6 @@ function searchProducts(){
 }
 }
 
-
-
 // function changePassword(){
 //     let credentials = {
 //         email: firebase.auth().currentUser

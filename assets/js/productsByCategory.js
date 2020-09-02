@@ -208,10 +208,6 @@ category_items.forEach(item=>{
 	
 })
 
-
-
-
-
 // const { scrollHeight } = document.documentElement;	
 document.addEventListener('scroll', ()=>{
 	const { scrollTop, scrollHeight, clientHeight } = document.documentElement;	
@@ -253,8 +249,6 @@ document.addEventListener('scroll', ()=>{
 	}
 	
 })
-
-
 
 
 function searchProducts(){
